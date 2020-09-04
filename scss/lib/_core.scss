@@ -1,9 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap');
 @import "variable";
+
+@font-face
+{
+    font-family: 'VL Pゴシック';
+    src: url('https://cdn.leafscape.be/VLGothic/VL-PGothic-Regular_web.woff2')
+    format("woff2");
+}
 
 html,
 body {
-    font-family: 'Sawarabi Gothic', sans-serif;
+    font-family: 'VL Pゴシック', sans-serif;
     color: $text;
     background-color: $background;
     line-height: 1.6;
