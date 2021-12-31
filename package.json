@@ -9,7 +9,7 @@
     "start": "npm-run-all -p watch server",
     "build": "npm-run-all scss autoprefixer",
     "format": "prettier -w ./scss",
-    "scss": "node-sass scss/boilerplate.scss build/boilerplate.css --output-style expanded --indent-width 4 --source-map build/",
+    "scss": "sass scss/boilerplate.scss build/boilerplate.css --source-map",
     "autoprefixer": "postcss --use autoprefixer -r build/boilerplate.css",
     "server": "browser-sync start -c bs-config.js",
     "watch": "chokidar \"scss/\" -c \"npm run build\""
@@ -18,10 +18,10 @@
     "autoprefixer": "^7.1.4",
     "browser-sync": "^2.18.13",
     "chokidar-cli": "^1.2.0",
-    "node-sass": "^4.5.3",
     "normalize.css": "^7.0.0",
     "npm-run-all": "^4.1.1",
     "postcss-cli": "^4.1.1",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "sass": "^1.45.2"
   }
 }
