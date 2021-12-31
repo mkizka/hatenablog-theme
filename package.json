@@ -8,7 +8,7 @@
     "prestart": "npm run build",
     "start": "npm-run-all -p watch server",
     "build": "npm-run-all scss autoprefixer",
-    "format": "prettier -w ./scss",
+    "format": "prettier -w .",
     "scss": "sass scss/boilerplate.scss build/boilerplate.css --source-map",
     "autoprefixer": "postcss --use autoprefixer -r build/boilerplate.css",
     "server": "browser-sync start -c bs-config.js",
