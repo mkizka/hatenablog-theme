@@ -1,14 +1,10 @@
 @import "variable";
 
-@font-face {
-    font-family: "VL Pゴシック";
-    src: url("https://cdn.leafscape.be/VLGothic/VL-PGothic-Regular_web.woff2")
-        format("woff2");
-}
+@import url("https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap");
 
 html,
 body {
-    font-family: "VL Pゴシック", sans-serif;
+    font-family: "Kosugi Maru", sans-serif;
     color: $text;
     background-color: $background;
     line-height: 1.8;
