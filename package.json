@@ -1,27 +1,23 @@
 {
-  "name": "hatena-blog-theme-boilerplate",
-  "version": "2.0.0",
-  "description": "Boilerplate for Hatena Blog theme",
-  "author": "Hatena Blog",
+  "name": "@mkizka/hatenablog-theme",
   "license": "MIT",
   "scripts": {
-    "prestart": "npm run build",
-    "start": "npm-run-all -p watch server",
-    "build": "npm-run-all scss autoprefixer",
+    "dev": "run-p -l dev:watch dev:server",
+    "build": "run-s -l build:scss build:prefix",
     "format": "prettier -w .",
-    "scss": "sass scss/boilerplate.scss build/boilerplate.css --source-map",
-    "autoprefixer": "postcss --use autoprefixer -r build/boilerplate.css",
-    "server": "browser-sync start -c bs-config.js",
-    "watch": "chokidar \"scss/\" -c \"npm run build\""
+    "dev:server": "serve build/",
+    "dev:watch": "chokidar \"scss/\" -c \"pnpm build\" --initial",
+    "build:scss": "sass scss/boilerplate.scss build/boilerplate.css",
+    "build:prefix": "postcss --use autoprefixer -r build/boilerplate.css"
   },
-  "devDependencies": {
+  "dependencies": {
     "autoprefixer": "^7.1.4",
-    "browser-sync": "^2.18.13",
     "chokidar-cli": "^1.2.0",
     "normalize.css": "^7.0.0",
     "npm-run-all": "^4.1.1",
     "postcss-cli": "^4.1.1",
     "prettier": "^2.2.1",
-    "sass": "^1.45.2"
+    "sass": "^1.45.2",
+    "serve": "^13.0.2"
   }
 }
