@@ -633,6 +633,12 @@ h6 {
     margin: auto !important;
 }
 
+/* YouTube埋め込みの中央寄せ */
+iframe[width][height][src][frameborder][allow][allowfullscreen][id] {
+    display: block !important;
+    margin: auto !important;
+}
+
 /* 埋め込みカードの中央寄せ */
 .embed-card {
     margin: auto !important;
